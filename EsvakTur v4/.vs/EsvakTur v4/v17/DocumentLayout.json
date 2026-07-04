@@ -1,0 +1,303 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\areas\\managerpanel\\controllers\\tourcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\areas\\managerpanel\\controllers\\tourcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|c:\\users\\yusuf\\source\\repos\\esvaktur v4\\esvaktur v4\\areas\\managerpanel\\views\\shared\\managerpanellayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\areas\\managerpanel\\views\\shared\\managerpanellayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\areas\\managerpanel\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\areas\\managerpanel\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\areas\\managerpanel\\managerpanelarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\areas\\managerpanel\\managerpanelarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\models\\esvaturv4model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\models\\esvaturv4model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\models\\tours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\models\\tours.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\migrations\\202603111210271_resetrelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\migrations\\202603111210271_resetrelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\migrations\\202603111213223_forcefk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\migrations\\202603111213223_forcefk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\models\\managers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\models\\managers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\models\\guides.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\models\\guides.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\areas\\managerpanel\\views\\tourcategory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\areas\\managerpanel\\views\\tourcategory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\assets\\css\\managerpanelstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\assets\\css\\managerpanelstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\areas\\managerpanel\\views\\tourcategory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\areas\\managerpanel\\views\\tourcategory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\esvaktur v4\\areas\\managerpanel\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A297015C-63A7-4905-8113-D60672920241}|EsvakTur v4\\EsvakTur v4.csproj|solutionrelative:esvaktur v4\\areas\\managerpanel\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 419,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EsvaTurV4Model.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Models\\EsvaTurV4Model.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Models\\EsvaTurV4Model.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Models\\EsvaTurV4Model.cs",
+              "RelativeToolTip": "EsvakTur v4\\Models\\EsvaTurV4Model.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:02:24.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tours.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Models\\Tours.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Models\\Tours.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Models\\Tours.cs",
+              "RelativeToolTip": "EsvakTur v4\\Models\\Tours.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:02:53.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "202603111213223_ForceFK.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Migrations\\202603111213223_ForceFK.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Migrations\\202603111213223_ForceFK.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Migrations\\202603111213223_ForceFK.cs",
+              "RelativeToolTip": "EsvakTur v4\\Migrations\\202603111213223_ForceFK.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:02:17.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "202603111210271_ResetRelationship.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Migrations\\202603111210271_ResetRelationship.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Migrations\\202603111210271_ResetRelationship.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Migrations\\202603111210271_ResetRelationship.cs",
+              "RelativeToolTip": "EsvakTur v4\\Migrations\\202603111210271_ResetRelationship.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:02:18.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ManagerPanelAreaRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\ManagerPanelAreaRegistration.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Areas\\ManagerPanel\\ManagerPanelAreaRegistration.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\ManagerPanelAreaRegistration.cs",
+              "RelativeToolTip": "EsvakTur v4\\Areas\\ManagerPanel\\ManagerPanelAreaRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:33:50.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManagerPanelLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Views\\Shared\\ManagerPanelLayout.cshtml",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Areas\\ManagerPanel\\Views\\Shared\\ManagerPanelLayout.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Views\\Shared\\ManagerPanelLayout.cshtml",
+              "RelativeToolTip": "EsvakTur v4\\Areas\\ManagerPanel\\Views\\Shared\\ManagerPanelLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T13:51:32.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Areas\\ManagerPanel\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "EsvakTur v4\\Areas\\ManagerPanel\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T00:05:48.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TourCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Controllers\\TourCategoryController.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Areas\\ManagerPanel\\Controllers\\TourCategoryController.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Controllers\\TourCategoryController.cs",
+              "RelativeToolTip": "EsvakTur v4\\Areas\\ManagerPanel\\Controllers\\TourCategoryController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:55:23.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "EsvakTur v4\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:02:15.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Managers.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Models\\Managers.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Models\\Managers.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Models\\Managers.cs",
+              "RelativeToolTip": "EsvakTur v4\\Models\\Managers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:08:11.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Guides.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Models\\Guides.cs",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Models\\Guides.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Models\\Guides.cs",
+              "RelativeToolTip": "EsvakTur v4\\Models\\Guides.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T13:04:01.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ManagerPanelStyle.css",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Assets\\Css\\ManagerPanelStyle.css",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Assets\\Css\\ManagerPanelStyle.css",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Assets\\Css\\ManagerPanelStyle.css",
+              "RelativeToolTip": "EsvakTur v4\\Assets\\Css\\ManagerPanelStyle.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-09T12:45:46.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Views\\TourCategory\\Index.cshtml",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Areas\\ManagerPanel\\Views\\TourCategory\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Views\\TourCategory\\Index.cshtml",
+              "RelativeToolTip": "EsvakTur v4\\Areas\\ManagerPanel\\Views\\TourCategory\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T12:44:40.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Views\\TourCategory\\Create.cshtml",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Areas\\ManagerPanel\\Views\\TourCategory\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Views\\TourCategory\\Create.cshtml",
+              "RelativeToolTip": "EsvakTur v4\\Areas\\ManagerPanel\\Views\\TourCategory\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T00:05:54.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EsvakTur v4\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T13:34:11.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Web.config",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Web.config",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Web.config",
+              "RelativeToolTip": "EsvakTur v4\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-05T00:09:32.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "web.config",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Views\\web.config",
+              "RelativeDocumentMoniker": "EsvakTur v4\\Areas\\ManagerPanel\\Views\\web.config",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTur v4\\EsvakTur v4\\Areas\\ManagerPanel\\Views\\web.config",
+              "RelativeToolTip": "EsvakTur v4\\Areas\\ManagerPanel\\Views\\web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-05T00:06:08.143Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

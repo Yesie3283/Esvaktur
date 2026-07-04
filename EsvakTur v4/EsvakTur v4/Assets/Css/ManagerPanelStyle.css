@@ -1,0 +1,319 @@
+﻿:root {
+    --sidebar-bg: #ffffff;
+    --main-bg: #0f172a; /* Koyu Lacivert/Siyah */
+    --card-bg: #1e293b; /* Kart Arka Planı */
+    --accent: #EF8034; /* Esvak Turuncusu */
+    --text-light: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-light);
+}
+
+.Layout {
+    display: flex;
+}
+
+/* SIDEBAR - Sabit ve Opak */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: var(--sidebar-bg) !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.brandbar {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.logo-img {
+    max-height: 55px;
+    width: auto;
+}
+
+.brand-text {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.menu-items ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.menu-items li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-bottom: 5px;
+}
+
+    .menu-items li.active a, .menu-items li a:hover {
+        background-color: rgba(239, 128, 52, 0.1);
+        color: var(--accent);
+    }
+
+/* ANA İÇERİK ALANI */
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 40px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-title h1 {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.header-title span {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* BUTONLAR */
+.btn-create {
+    background: linear-gradient(135deg, #EF8034, #D66D2F);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(239, 128, 52, 0.3);
+    border: none;
+}
+
+/* KART VE TABLO - Ferah Düzen */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .custom-table th {
+        text-align: left;
+        padding: 15px;
+        color: var(--text-muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .custom-table td {
+        padding: 18px 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        font-size: 14px;
+    }
+
+    .custom-table tr:hover {
+        background-color: rgba(255,255,255,0.02);
+    }
+
+/* TABLO İÇİ BUTONLAR */
+.btn-edit-sm {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+    .btn-edit-sm:hover {
+        background: var(--accent);
+        color: #fff;
+    }
+
+.btn-delete-sm {
+    color: #f87171;
+    border: 1px solid #f87171;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+    .btn-delete-sm:hover {
+        background: #f87171;
+        color: #fff;
+    }
+
+.badge.active {
+    color: var(--accent);
+    background: rgba(239, 128, 52, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+/* FORM ELEMANLARI */
+.form-container {
+    max-width: 800px; /* Formun çok yayılmaması için */
+}
+
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .form-group label {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-light);
+    }
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: var(--main-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+    .form-input:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(239, 128, 52, 0.1);
+    }
+
+/* Hata Mesajları */
+.error-message {
+    font-size: 12px;
+    color: #f87171;
+    margin-top: 4px;
+}
+
+/* Checkbox / Switch Stili */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+input:checked + .slider {
+    background-color: var(--accent);
+}
+
+    input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+
+/* Footer ve Kaydet Butonu */
+.form-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-back {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    .btn-back:hover {
+        color: var(--text-light);
+    }
+
+.btn-create i {
+    margin-right: 8px;
+}

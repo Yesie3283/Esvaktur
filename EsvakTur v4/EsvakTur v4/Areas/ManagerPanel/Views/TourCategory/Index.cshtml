@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EsvakTur_v4.Models.TourCategory>
+    @{
+        ViewBag.Title = "Category Management";
+        Layout = "~/Areas/ManagerPanel/Views/Shared/ManagerPanelLayout.cshtml";
+    }
+
+    <div class="content-header">
+        <div class="header-title">
+            <h1>Tour Categories</h1>
+            <span>Manage and organize your tour categories for Esvak Travel.</span>
+        </div>
+        <div class="header-actions">
+            <a href="@Url.Action("Create", "TourCategory")" class="btn-create"><i class="fa-solid fa-plus"></i> New Category</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Category Name</th>
+                        <th>Slug</th>
+                        <th>Status</th>
+                        <th style="text-align:right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>#@item.ID</td>
+                                <td><strong>@item.Name</strong></td>
+                                <td>/@item.Description</td>
+                                <td><span class="badge active">Active</span></td>
+                                <td class="table-actions">
+                                    <a href="#" class="btn-edit-sm">Edit</a>
+                                    <a href="#" class="btn-delete-sm">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        @* örnek veriler *@
+                        <tr>
+                            <td>#101</td>
+                            <td><strong>Cultural Tours</strong></td>
+                            <td>/cultural-tours</td>
+                            <td><span class="badge active">Active</span></td>
+                            <td class="table-actions">
+                                <a href="#" class="btn-edit-sm">Edit</a>
+                                <a href="#" class="btn-delete-sm">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>

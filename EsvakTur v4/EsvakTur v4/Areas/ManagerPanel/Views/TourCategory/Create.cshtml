@@ -1,0 +1,60 @@
+﻿@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@inherits System.Web.Mvc.WebViewPage<EsvakTur_v4.Models.TourCategory>
+@{
+    ViewBag.Title = "Create";
+
+    Layout = "~/Areas/ManagerPanel/Views/Shared/ManagerPanelLayout.cshtml";
+}
+
+
+<div class="content-header">
+    <div class="header-title">
+        <h1>Create New Tour Category</h1>
+        <span>Define a new tour category to organize your tours effectively.</span>
+    </div>
+    <div class="header-actions">
+        <a href='@Url.Action("Index", "TourCategory")' class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Back to Categories
+        </a>
+    </div>
+</div>
+
+<div class="form-container">
+    @using (Html.BeginForm("Create", "TourCategory", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="card">
+            <div class="form-body">
+                @Html.ValidationSummary(excludePropertyErrors: true, message: null, htmlAttributes: new { @class = "text-danger" })
+
+                <div class="form-group">
+                    <label for="CategoryName">Category Name</label>
+                    @Html.TextBox("Name", Model?.Name, new { @class = "form-input", placeholder = "Enter category name..." })
+                    @Html.ValidationMessage("Name", "", new { @class = "error-message" })
+                </div>
+
+                <div class="form-group">
+                    <label for="Description">Description</label>
+                    @Html.TextArea("Description", Model?.Description, 4, 60, new { @class = "form-input", placeholder = "Briefly describe the category..." })
+                    @Html.ValidationMessage("Description", "", new { @class = "error-message" })
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="switch">
+                        @Html.CheckBox("IsActive", Model != null && Model.IsActive, new { @class = "switch-input" })
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="checkbox-label">Active Status</span>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn-create">
+                        <i class="fa-solid fa-floppy-disk"></i> Save Category
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
