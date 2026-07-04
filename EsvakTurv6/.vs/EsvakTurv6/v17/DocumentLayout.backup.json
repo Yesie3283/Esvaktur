@@ -1,0 +1,371 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|c:\\users\\yusuf\\source\\repos\\esvakturv6\\esvakturv6\\areas\\mainpage\\views\\mainpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\mainpage\\views\\mainpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\views\\managerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\views\\managerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\views\\tourcategory\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\views\\tourcategory\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\controllers\\tourcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\controllers\\tourcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\mainpage\\controllers\\mainpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\mainpage\\controllers\\mainpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\controllers\\tourcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\controllers\\tourcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\controllers\\managerlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\controllers\\managerlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\mainpage\\views\\shared\\mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\mainpage\\views\\shared\\mainlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\models\\esvaktur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\models\\esvaktur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\models\\managers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\models\\managers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\managerpanelarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\managerpanelarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\views\\tour\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\views\\tour\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\mainpage\\mainpagearearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\mainpage\\mainpagearearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\views\\tour\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\views\\tour\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\views\\tourcategory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\views\\tourcategory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\views\\shared\\managerpanellayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\views\\shared\\managerpanellayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\esvakturv6\\areas\\managerpanel\\views\\tour\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E90CDD-8904-4F61-AB6A-A2AE551CEF06}|EsvakTurv6\\EsvakTurv6.csproj|solutionrelative:esvakturv6\\areas\\managerpanel\\views\\tour\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 377,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Web.config",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Web.config",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Web.config",
+              "RelativeToolTip": "EsvakTurv6\\Web.config",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-07-02T05:38:14.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TourCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\TourCategoryController.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\TourCategoryController.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\TourCategoryController.cs",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\TourCategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T05:32:15.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "EsvakTurv6\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA7wB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T13:17:13.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\ManagerLogIn\\Index.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\ManagerLogIn\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\ManagerLogIn\\Index.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\ManagerLogIn\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-27T13:12:22.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ManagerLogInController.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\ManagerLogInController.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\ManagerLogInController.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\ManagerLogInController.cs",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\ManagerLogInController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T13:00:53.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\MainPage\\Views\\MainPage\\Index.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\MainPage\\Views\\MainPage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\MainPage\\Views\\MainPage\\Index.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\MainPage\\Views\\MainPage\\Index.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAF4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-26T20:47:25.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainPageController.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\MainPage\\Controllers\\MainPageController.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\MainPage\\Controllers\\MainPageController.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\MainPage\\Controllers\\MainPageController.cs",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\MainPage\\Controllers\\MainPageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-26T20:47:03.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\MainPage\\Views\\Shared\\MainLayout.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\MainPage\\Views\\Shared\\MainLayout.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\MainPage\\Views\\Shared\\MainLayout.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\MainPage\\Views\\Shared\\MainLayout.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-26T20:20:51.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainPageAreaRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\MainPage\\MainPageAreaRegistration.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\MainPage\\MainPageAreaRegistration.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\MainPage\\MainPageAreaRegistration.cs",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\MainPage\\MainPageAreaRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-26T20:00:12.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-25T02:05:30.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T02:05:23.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Edit.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Edit.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Edit.cshtml",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAowG4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-25T01:54:31.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\TourCategory\\Create.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\TourCategory\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\TourCategory\\Create.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\TourCategory\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-17T09:14:13.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Create.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Create.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-17T10:33:46.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Index.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Index.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Tour\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-17T09:15:20.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\TourCategory\\Details.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\TourCategory\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\TourCategory\\Details.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\TourCategory\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-17T07:43:43.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ManagerPanelLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Shared\\ManagerPanelLayout.cshtml",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Shared\\ManagerPanelLayout.cshtml",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Views\\Shared\\ManagerPanelLayout.cshtml",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Views\\Shared\\ManagerPanelLayout.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-14T23:16:47.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TourController.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\TourController.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\TourController.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\TourController.cs",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\Controllers\\TourController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T07:40:09.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ManagerPanelAreaRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\ManagerPanelAreaRegistration.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Areas\\ManagerPanel\\ManagerPanelAreaRegistration.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Areas\\ManagerPanel\\ManagerPanelAreaRegistration.cs",
+              "RelativeToolTip": "EsvakTurv6\\Areas\\ManagerPanel\\ManagerPanelAreaRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:00:14.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Managers.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Models\\Managers.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Models\\Managers.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Models\\Managers.cs",
+              "RelativeToolTip": "EsvakTurv6\\Models\\Managers.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:07:55.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EsvakTur.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Models\\EsvakTur.cs",
+              "RelativeDocumentMoniker": "EsvakTurv6\\Models\\EsvakTur.cs",
+              "ToolTip": "C:\\Users\\Yusuf\\source\\repos\\EsvakTurv6\\EsvakTurv6\\Models\\EsvakTur.cs",
+              "RelativeToolTip": "EsvakTurv6\\Models\\EsvakTur.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:03:27.15Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+﻿@model EsvakTurv6.Models.TourCategories
+@{
+    ViewBag.Title = "Category Details";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/ManagerPanelLayout.cshtml";
+}
+
+<div class="container mt-4" style="max-width:800px;">
+    <div class="mb-4">
+        <a href="@Url.Action("Index", "TourCategory", new {area = "ManagerPanel"})" class="btn btn-link text-decoration-none p-0 text-muted mb-2">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+        <h3 class="text-dark fw-bold m-0">Category Details</h3>
+    </div>
+</div>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-4">
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold text-secondary">Category ID</label>
+            <input type="text" class="form-control bg-light" value="#@Model.ID" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold text-secondary">Category Name</label>
+            <input type="text" class="form-control bg-light" value="@Model.Name" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold text-secondary">Description</label>
+            <textarea class="form-control bg-light" rows="4" disabled>@(string.IsNullOrEmpty(Model.Description) ? "-" : Model.Description)</textarea>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label d-block fw-semibold text-secondary">Status</label>
+            @if (Model.IsActive)
+            {
+                <span class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">Active</span>
+            }
+            else
+            {
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle px-2.5 py-1.5 rounded-pill">Passive</span>
+            }
+        </div>
+
+        <hr class="text-muted my-4">
+
+        <div class="d-flex justify-content-end gap-2">
+            <a href="@Url.Action("Edit", "TourCategory", new { area = "ManagerPanel", id = Model.ID })" class="btn btn-warning px-4 text-white">
+                <i class="bi bi-pencil-square"></i> Edit Instead
+            </a>
+            <a href="@Url.Action("Index", "TourCategory", new { area = "ManagerPanel" })" class="btn btn-light px-4">Close</a>
+        </div>
+    </div>
+</div>

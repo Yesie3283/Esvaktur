@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/ManagerPanelLayout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="mb-4">
+        <h3 class="text-dark fw-bold m-0">Dashboard</h3>
+        <p class="text-muted small">Real-time system overview and statistics.</p>
+    </div>
+
+    <div class="row g-3 mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 bg-white p-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="text-muted small fw-semibold text-uppercase mb-1">Total Tours</p>
+                        <h3 class="fw-bold m-0 text-dark">@ViewBag.TotalTours</h3>
+                    </div>
+                    <div class="bg-primary bg-opacity-10 p-3 rounded-3 text-primary">
+                        <i class="bi bi-airplane fs-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 bg-white p-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="text-muted small fw-semibold text-uppercase mb-1">Active Tours</p>
+                        <h3 class="fw-bold m-0 text-success">@ViewBag.ActiveTours</h3>
+                    </div>
+                    <div class="bg-success bg-opacity-10 p-3 rounded-3 text-success">
+                        <i class="bi bi-check-circle-fill fs-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 bg-white p-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="text-muted small fw-semibold text-uppercase mb-1">Categories</p>
+                        <h3 class="fw-bold m-0 text-info">@ViewBag.TotalCategories</h3>
+                    </div>
+                    <div class="bg-info bg-opacity-10 p-3 rounded-3 text-info">
+                        <i class="bi bi-tags fs-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 p-4 mb-4">
+                <h5 class="text-dark fw-bold mb-3">Tours per Category</h5>
+                <canvas id="dashboardRealChart"></canvas>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card shadow-sm border-0 p-4 mb-4 h-100">
+                <h5 class="text-dark fw-bold mb-2">Quick Actions</h5>
+                <p class="text-muted small">Manage your website context quickly.</p>
+                <div class="d-grid gap-2 mt-3">
+                    <a href="@Url.Action("Create", "Tour", new { area = "ManagerPanel" })" class="btn btn-outline-primary btn-sm text-start p-2">
+                        <i class="bi bi-plus-circle me-2"></i> Add New Tour
+                    </a>
+                    <a href="@Url.Action("Index", "TourCategory", new { area = "ManagerPanel" })" class="btn btn-outline-secondary btn-sm text-start p-2">
+                        <i class="bi bi-tag me-2"></i> Manage Categories
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    var ctx = document.getElementById('dashboardRealChart').getContext('2d');
+
+    // C#'tan gelen ViewBag verilerini JavaScript dizilerine güvenli (Html.Raw ve Json.Encode ile) çeviriyoruz
+    var serverLabels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartLabels));
+    var serverValues = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartValues));
+
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: serverLabels, // Gerçek Kategori İsimleri
+            datasets: [{
+                label: 'Tours Count',
+                data: serverValues, // Gerçek Veritabanı Sayıları
+                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1 // Sayılar adet bildirdiği için küsuratlı (1.5 tur gibi) görünmesini engeller
+                    }
+                }
+            }
+        }
+    });
+</script>
