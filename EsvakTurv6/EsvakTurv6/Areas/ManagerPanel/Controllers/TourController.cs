@@ -26,12 +26,10 @@ namespace EsvakTurv6.Areas.ManagerPanel.Controllers
             var tour = db.Tours.Find(id);
             if (tour != null)
             {
-                
-                tour.IsDeleted = true;
+                db.Tours.Remove(tour); 
                 db.SaveChanges();
             }
 
-           
             string redirectUrl = Url.Action("Index", "Tour", new { area = "ManagerPanel" });
             return Content("<script>parent.location.href = '" + redirectUrl + "';</script>");
         }

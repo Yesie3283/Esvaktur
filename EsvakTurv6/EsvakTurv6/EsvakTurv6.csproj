@@ -121,6 +121,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\MainPage\Controllers\MainPageController.cs" />
+    <Compile Include="Areas\MainPage\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\MainPage\Controllers\ToursController.cs" />
     <Compile Include="Areas\MainPage\MainPageAreaRegistration.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\DashboardController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\ManagerLogInController.cs" />
@@ -137,6 +139,7 @@
     <Compile Include="Models\Managers.cs" />
     <Compile Include="Models\TourCategories.cs" />
     <Compile Include="Models\Tours.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +205,11 @@
     <Content Include="Areas\MainPage\Views\Shared\MainLayout.cshtml" />
     <Content Include="Areas\MainPage\Views\MainPage\Index.cshtml" />
     <Content Include="Areas\ManagerPanel\Views\ManagerLogIn\Index.cshtml" />
+    <Content Include="Areas\MainPage\Views\MainPage\Details.cshtml" />
+    <Content Include="Areas\MainPage\Views\Register\Register.cshtml" />
+    <Content Include="Areas\MainPage\Views\Register\Login.cshtml" />
+    <Content Include="Areas\MainPage\Views\Tours\Search.cshtml" />
+    <Content Include="Areas\MainPage\Views\Tours\AllTours.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />

@@ -1,39 +1,11 @@
 ﻿@model IEnumerable<EsvakTurv6.Models.Tours>
 
 @{
-    ViewBag.Title = "Ana Sayfa";
+    ViewBag.Title = "Arama Sonuçları";
     Layout = "~/Areas/MainPage/Views/Shared/MainLayout.cshtml";
 }
 
 <style>
-    .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        min-height: 75vh;
-        display: flex;
-        align-items: center;
-    }
-
-    .search-box {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 100px;
-        padding: 10px;
-    }
-
-    .search-input {
-        background: transparent !important;
-        border: none !important;
-        color: white !important;
-    }
-
-        .search-input::placeholder {
-            color: rgba(255, 255, 255, 0.75);
-        }
-
     .tour-badge {
         position: absolute;
         top: 15px;
@@ -75,34 +47,16 @@
             }
 </style>
 
-<section class="hero-section text-center text-white mb-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <span class="badge text-uppercase mb-3 px-3 py-2" style="background-color: #ff6b00;">Dünyayı Bizimle Keşfedin</span>
-                <h1 class="display-3 fw-bold mb-3" style="letter-spacing: -1px;">Hayalindeki Rotayı Bul</h1>
-                <p class="lead mb-4 text-white-50">Kültür turlarından hafta sonu kaçamaklarına kadar en özel seyahat deneyimleri sizi bekliyor.</p>
-
-                @using (Html.BeginForm("Search", "Tours", FormMethod.Get, new { @class = "search-box max-width-600 mx-auto mt-4" }))
-                {
-                    <div class="input-group">
-                        <span class="input-group-text bg-transparent border-0 text-white"><i class="bi bi-search fs-5"></i></span>
-                        <input type="text" name="query" class="form-control search-input ps-2" placeholder="Gitmek istediğiniz yeri veya turu arayın...">
-                        <button type="submit" class="btn btn-warning rounded-pill px-4 text-dark fw-bold ms-2" style="background-color: #ff6b00; border: none;">Arayın</button>
-                    </div>
-                }
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="container my-5">
-    <div class="d-flex justify-content-between align-items-end mb-4">
-        <div>
-            <h2 class="text-dark fw-bold m-0">Sizin İçin Seçtiğimiz Özel Turlar</h2>
-            <p class="text-muted small m-0">En çok tercih edilen ve güncel aktif turlarımız.</p>
-        </div>
-        <a href="@Url.Action("AllTours", "Tours")" class="btn btn-outline-dark btn-sm rounded-pill px-3">Tümünü Gör <i class="bi bi-arrow-right ms-1"></i></a>
+    <div class="mb-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "MainPage")" class="text-decoration-none text-muted">Ana Sayfa</a></li>
+                <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">Arama Sonuçları</li>
+            </ol>
+        </nav>
+        <h2 class="text-dark fw-bold m-0">"<span>@ViewBag.SearchQuery</span>" İçin Sonuçlar</h2>
+        <p class="text-muted small m-0">Toplam @Model.Count() tur bulundu.</p>
     </div>
 
     <div class="row g-4">
@@ -112,7 +66,6 @@
             {
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0 rounded-3 hover-card bg-white">
-
                         @if (tour.TourCategories != null)
                         {
                             <div class="tour-badge text-uppercase">@tour.TourCategories.Name</div>
@@ -131,11 +84,9 @@
 
                         <div class="card-body p-4 d-flex flex-column">
                             <h5 class="card-title fw-bold text-dark mb-2">@tour.Title</h5>
-
                             <p class="card-text text-muted small flex-grow-1">
                                 @if (tour.Description != null)
                                 {
-                                    
                                     @(tour.Description.Length > 100 ? tour.Description.Substring(0, 100) + "..." : tour.Description)
                                 }
                             </p>
@@ -151,7 +102,6 @@
                                     <span class="fs-5 text-muted fw-bold">₺</span><span class="fs-4 fw-bold text-dark">@string.Format("{0:N0}", tour.Price)</span>
                                 </div>
                             </div>
-
                             <a href="@Url.Action("Details", "MainPage", new { id = tour.ID })" class="btn btn-light btn-sm w-100 rounded-pill mt-3 fw-semibold text-secondary py-2 border">Detayları İncele</a>
                         </div>
                     </div>
@@ -160,9 +110,13 @@
         }
         else
         {
-            <div class="col-12 text-center py-5">
-                <i class="bi bi-airplane fs-1 text-muted"></i>
-                <p class="text-muted mt-2">Henüz aktif bir tur bulunamadı.</p>
+            <div class="col-12 text-center py-5 bg-white rounded-3 shadow-sm border">
+                <div class="py-4">
+                    <i class="bi bi-search fs-1 text-muted d-block mb-3"></i>
+                    <h4 class="fw-bold text-dark">Eşleşen Tur Bulunamadı</h4>
+                    <p class="text-muted small px-3">Aradığınız kriterlere uygun aktif bir turumuz bulunmamaktadır. Farklı kelimelerle tekrar aramayı deneyebilirsiniz.</p>
+                    <a href="@Url.Action("Index", "MainPage")" class="btn btn-warning rounded-pill px-4 text-dark fw-bold mt-2" style="background-color: #ff6b00; border: none;">Ana Sayfaya Dön</a>
+                </div>
             </div>
         }
     </div>
