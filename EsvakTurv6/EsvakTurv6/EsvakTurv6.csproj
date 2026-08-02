@@ -122,6 +122,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\MainPage\Controllers\MainPageController.cs" />
     <Compile Include="Areas\MainPage\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\MainPage\Controllers\SeeCategoriesController.cs" />
+    <Compile Include="Areas\MainPage\Controllers\SeeToursByCategories.cs" />
     <Compile Include="Areas\MainPage\Controllers\ToursController.cs" />
     <Compile Include="Areas\MainPage\MainPageAreaRegistration.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\DashboardController.cs" />
@@ -210,6 +212,9 @@
     <Content Include="Areas\MainPage\Views\Register\Login.cshtml" />
     <Content Include="Areas\MainPage\Views\Tours\Search.cshtml" />
     <Content Include="Areas\MainPage\Views\Tours\AllTours.cshtml" />
+    <Content Include="Areas\MainPage\Views\SeeCategories\Index.cshtml" />
+    <Content Include="Areas\MainPage\Views\MainPage\ContactInf.cshtml" />
+    <Content Include="Areas\MainPage\Views\SeeToursByCategories\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
