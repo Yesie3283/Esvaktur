@@ -1,9 +1,9 @@
-﻿@{
+﻿@model EsvakTurv6.Models.Tours
+
+@{
     ViewBag.Title = Model.Title + " - Tur Detayı";
     Layout = "~/Areas/MainPage/Views/Shared/MainLayout.cshtml";
 }
-
-@model EsvakTurv6.Models.Tours
 
 <style>
     .details-hero {
@@ -28,32 +28,6 @@
         font-weight: 700;
         display: inline-block;
     }
-
-    .nav-tabs-custom {
-        border-bottom: 2px solid #f1f1f1;
-    }
-
-        .nav-tabs-custom .nav-link {
-            border: none;
-            color: #6c757d;
-            background: transparent;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            margin-right: 10px;
-        }
-
-            .nav-tabs-custom .nav-link.active {
-                background-color: #ff6b00 !important;
-                color: white !important;
-                box-shadow: 0 4px 15px rgba(255, 107, 0, 0.2);
-            }
-
-            .nav-tabs-custom .nav-link:hover:not(.active) {
-                background-color: #f8f9fa;
-                color: #ff6b00;
-            }
 </style>
 
 <div class="container my-5">
@@ -61,7 +35,6 @@
         <a href="javascript:history.back()" class="btn btn-outline-dark btn-sm rounded-pill px-3">
             <i class="bi bi-arrow-left me-1"></i> Geri Dön
         </a>
-        @*y*@
     </div>
 
     <div class="row g-5">
@@ -93,31 +66,14 @@
                 </div>
             </div>
 
-            <ul class="nav nav-tabs nav-tabs-custom border-0 mb-4" id="tourTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active w-100" id="aciklama-tab" data-bs-toggle="tab" data-bs-target="#aciklama" type="button" role="tab" aria-controls="aciklama" aria-selected="true">
-                        Açıklama
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link w-100" id="yorumlar-tab" data-bs-toggle="tab" data-bs-target="#yorumlar" type="button" role="tab" aria-controls="yorumlar" aria-selected="false">
-                        Yorumlar
-                    </button>
-                </li>
-            </ul>
+            <hr class="my-4 opacity-25">
 
-            <div class="tab-content" id="tourTabContent">
-                <div class="tab-pane fade show active" id="aciklama" role="tabpanel" aria-labelledby="aciklama-tab">
-                    <h3 class="fw-bold text-dark mb-3">Tur Açıklaması</h3>
-                    <p class="text-secondary lead" style="white-space: pre-line; line-height: 1.8;">
-                        @Model.Description
-                    </p>
-                </div>
 
-                <div class="tab-pane fade" id="yorumlar" role="tabpanel" aria-labelledby="yorumlar-tab">
-                    <h3 class="fw-bold text-dark mb-4">Tur Yorumları</h3>
-
-                </div>
+            <div class="mt-4">
+                <h3 class="fw-bold text-dark mb-3">Tur Açıklaması</h3>
+                <p class="text-secondary lead" style="white-space: pre-line; line-height: 1.8;">
+                    @Model.Description
+                </p>
             </div>
         </div>
 
@@ -140,9 +96,11 @@
                         <span class="fw-bold text-dark">Kredi Kartı / Havale</span>
                     </div>
 
-                    <button class="btn w-100 rounded-pill py-3 fw-bold text-white shadow-sm" style="background-color: #ff6b00; border: none;">
+                    <a href="@Url.Action("Checkout", "MainPage", new { id = Model.ID, area = "MainPage" })"
+                       class="btn w-100 rounded-pill py-3 fw-bold text-white shadow-sm d-block text-center text-decoration-none"
+                       style="background-color: #ff6b00; border: none;">
                         Rezervasyon Yap <i class="bi bi-chevron-right ms-1"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
