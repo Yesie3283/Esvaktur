@@ -3,74 +3,125 @@
     Layout = "~/Areas/ManagerPanel/Views/Shared/ManagerPanelLayout.cshtml";
 }
 
-<div class="container mt-4">
-    <div class="mb-4">
-        <h3 class="text-dark fw-bold m-0">Dashboard</h3>
-        <p class="text-muted small">Real-time system overview and statistics.</p>
+<div class="container-fluid py-2">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h3 class="text-dark fw-bold m-0">Dashboard</h3>
+            <p class="text-muted small mb-0">Sistem istatistikleri ve canlı tur operasyon özeti.</p>
+        </div>
+        <span class="badge bg-light text-dark border px-3 py-2 rounded-pill small">
+            <i class="bi bi-clock-history text-warning me-1" style="color:#ff6b00 !important;"></i> Canlı Veri
+        </span>
     </div>
+
 
     <div class="row g-3 mb-4">
-        <div class="col-md-4">
-            <div class="card shadow-sm border-0 bg-white p-3">
+        <div class="col-xl-3 col-md-6">
+            <div class="card shadow-sm border-0 bg-white p-3 rounded-4">
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                        <p class="text-muted small fw-semibold text-uppercase mb-1">Total Tours</p>
+                        <p class="text-muted extra-small fw-semibold text-uppercase mb-1" style="font-size:0.75rem;">Toplam Tur</p>
                         <h3 class="fw-bold m-0 text-dark">@ViewBag.TotalTours</h3>
                     </div>
-                    <div class="bg-primary bg-opacity-10 p-3 rounded-3 text-primary">
-                        <i class="bi bi-airplane fs-3"></i>
+                    <div class="p-3 rounded-4 text-white" style="background-color: #0f172a;">
+                        <i class="bi bi-airplane fs-4"></i>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow-sm border-0 bg-white p-3">
+
+        <div class="col-xl-3 col-md-6">
+            <div class="card shadow-sm border-0 bg-white p-3 rounded-4">
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                        <p class="text-muted small fw-semibold text-uppercase mb-1">Active Tours</p>
+                        <p class="text-muted extra-small fw-semibold text-uppercase mb-1" style="font-size:0.75rem;">Yayındaki Turlar</p>
                         <h3 class="fw-bold m-0 text-success">@ViewBag.ActiveTours</h3>
                     </div>
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 text-success">
-                        <i class="bi bi-check-circle-fill fs-3"></i>
+                    <div class="bg-success bg-opacity-10 p-3 rounded-4 text-success">
+                        <i class="bi bi-check-circle-fill fs-4"></i>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow-sm border-0 bg-white p-3">
+
+        <div class="col-xl-3 col-md-6">
+            <div class="card shadow-sm border-0 bg-white p-3 rounded-4">
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                        <p class="text-muted small fw-semibold text-uppercase mb-1">Categories</p>
+                        <p class="text-muted extra-small fw-semibold text-uppercase mb-1" style="font-size:0.75rem;">Kategoriler</p>
                         <h3 class="fw-bold m-0 text-info">@ViewBag.TotalCategories</h3>
                     </div>
-                    <div class="bg-info bg-opacity-10 p-3 rounded-3 text-info">
-                        <i class="bi bi-tags fs-3"></i>
+                    <div class="bg-info bg-opacity-10 p-3 rounded-4 text-info">
+                        <i class="bi bi-tags fs-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xl-3 col-md-6">
+            <div class="card shadow-sm border-0 bg-white p-3 rounded-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="text-muted extra-small fw-semibold text-uppercase mb-1" style="font-size:0.75rem;">Toplam Rezervasyon</p>
+                        <h3 class="fw-bold m-0" style="color: #ff6b00;">@(ViewBag.TotalBookings ?? 0)</h3>
+                    </div>
+                    <div class="p-3 rounded-4" style="background-color: rgba(255, 107, 0, 0.1); color: #ff6b00;">
+                        <i class="bi bi-journal-check fs-4"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
+
+    <div class="row g-4">
         <div class="col-lg-8">
-            <div class="card shadow-sm border-0 p-4 mb-4">
-                <h5 class="text-dark fw-bold mb-3">Tours per Category</h5>
-                <canvas id="dashboardRealChart"></canvas>
+            <div class="card shadow-sm border-0 p-4 rounded-4 bg-white h-100">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="text-dark fw-bold m-0">Kategoriye Göre Tur Dağılımı</h5>
+                    <span class="text-muted small">Adet Dağılımı</span>
+                </div>
+                <div style="position: relative; height: 300px; width: 100%;">
+                    <canvas id="dashboardRealChart"></canvas>
+                </div>
             </div>
         </div>
+
+
         <div class="col-lg-4">
-            <div class="card shadow-sm border-0 p-4 mb-4 h-100">
-                <h5 class="text-dark fw-bold mb-2">Quick Actions</h5>
-                <p class="text-muted small">Manage your website context quickly.</p>
-                <div class="d-grid gap-2 mt-3">
-                    <a href="@Url.Action("Create", "Tour", new { area = "ManagerPanel" })" class="btn btn-outline-primary btn-sm text-start p-2">
-                        <i class="bi bi-plus-circle me-2"></i> Add New Tour
-                    </a>
-                    <a href="@Url.Action("Index", "TourCategory", new { area = "ManagerPanel" })" class="btn btn-outline-secondary btn-sm text-start p-2">
-                        <i class="bi bi-tag me-2"></i> Manage Categories
-                    </a>
+            <div class="card shadow-sm border-0 p-4 rounded-4 bg-white h-100 d-flex flex-column justify-content-between">
+                <div>
+                    <h5 class="text-dark fw-bold mb-1">Hızlı Operasyonlar</h5>
+                    <p class="text-muted small mb-4">Sık kullanılan panel kısayolları.</p>
+
+                    <div class="d-grid gap-2">
+                        <a href="@Url.Action("Create", "Tour", new { area = "ManagerPanel" })"
+                           class="btn btn-outline-dark text-start p-3 rounded-3 border-opacity-10 d-flex align-items-center justify-content-between fw-semibold">
+                            <span><i class="bi bi-plus-circle me-2 text-warning" style="color:#ff6b00 !important;"></i> Yeni Tur Ekle</span>
+                            <i class="bi bi-chevron-right small text-muted"></i>
+                        </a>
+
+                        <a href="@Url.Action("Index", "TourCategory", new { area = "ManagerPanel" })"
+                           class="btn btn-outline-dark text-start p-3 rounded-3 border-opacity-10 d-flex align-items-center justify-content-between fw-semibold">
+                            <span><i class="bi bi-tags me-2 text-info"></i> Kategorileri Yönet</span>
+                            <i class="bi bi-chevron-right small text-muted"></i>
+                        </a>
+
+                        <a href="@Url.Action("Index", "Bookings", new { area = "ManagerPanel" })"
+                           class="btn btn-outline-dark text-start p-3 rounded-3 border-opacity-10 d-flex align-items-center justify-content-between fw-semibold">
+                            <span><i class="bi bi-journal-text me-2 text-success"></i> Rezervasyon Listesi</span>
+                            <i class="bi bi-chevron-right small text-muted"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-top text-center">
+                    <span class="text-muted extra-small" style="font-size:0.75rem;">
+                        <i class="bi bi-shield-lock me-1"></i> EsvakTour Operasyon Paneli
+                    </span>
                 </div>
             </div>
         </div>
@@ -80,34 +131,51 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    var ctx = document.getElementById('dashboardRealChart').getContext('2d');
+    document.addEventListener("DOMContentLoaded", function () {
+        var ctx = document.getElementById('dashboardRealChart').getContext('2d');
 
-    // C#'tan gelen ViewBag verilerini JavaScript dizilerine güvenli (Html.Raw ve Json.Encode ile) çeviriyoruz
-    var serverLabels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartLabels));
-    var serverValues = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartValues));
+        var serverLabels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartLabels));
+        var serverValues = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ChartValues));
 
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: serverLabels, // Gerçek Kategori İsimleri
-            datasets: [{
-                label: 'Tours Count',
-                data: serverValues, // Gerçek Veritabanı Sayıları
-                backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        stepSize: 1 // Sayılar adet bildirdiği için küsuratlı (1.5 tur gibi) görünmesini engeller
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: serverLabels,
+                datasets: [{
+                    label: 'Tur Sayısı',
+                    data: serverValues,
+                    backgroundColor: 'rgba(255, 107, 0, 0.75)',
+                    borderColor: '#ff6b00',
+                    borderWidth: 1.5,
+                    borderRadius: 8,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
                     }
                 }
             }
-        }
+        });
     });
 </script>

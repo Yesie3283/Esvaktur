@@ -150,12 +150,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\MainPage\Controllers\MainPageController.cs" />
+    <Compile Include="Areas\MainPage\Controllers\ProfileController.cs" />
     <Compile Include="Areas\MainPage\Controllers\RegisterController.cs" />
     <Compile Include="Areas\MainPage\Controllers\SeeCategoriesController.cs" />
     <Compile Include="Areas\MainPage\Controllers\SeeToursByCategories.cs" />
     <Compile Include="Areas\MainPage\Controllers\SeeToursController.cs" />
     <Compile Include="Areas\MainPage\Controllers\ToursController.cs" />
     <Compile Include="Areas\MainPage\MainPageAreaRegistration.cs" />
+    <Compile Include="Areas\ManagerPanel\Controllers\BookingsController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\DashboardController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\ManagerLogInController.cs" />
     <Compile Include="Areas\ManagerPanel\Controllers\TourCategoryController.cs" />
@@ -167,6 +169,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Bookings.cs" />
     <Compile Include="Models\EsvakTur.cs" />
     <Compile Include="Models\Guides.cs" />
     <Compile Include="Models\Managers.cs" />
@@ -250,6 +253,8 @@
     <Content Include="Areas\MainPage\Views\SeeToursByCategories\Index.cshtml" />
     <Content Include="Areas\MainPage\Views\SeeTours\Index.cshtml" />
     <Content Include="Areas\MainPage\Views\MainPage\Checkout.cshtml" />
+    <Content Include="Areas\MainPage\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\ManagerPanel\Views\Bookings\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />

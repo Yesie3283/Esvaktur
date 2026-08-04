@@ -1,0 +1,171 @@
+﻿@model EsvakTurv6.Models.Users
+
+@{
+    ViewBag.Title = "Profilim";
+    Layout = "~/Areas/MainPage/Views/Shared/MainLayout.cshtml";
+
+    var upcomingTours = ViewBag.UpcomingTours as List<EsvakTurv6.Models.Tours>;
+    var completedTours = ViewBag.CompletedTours as List<EsvakTurv6.Models.Tours>;
+}
+
+<div class="container my-5 py-3">
+
+
+    <div class="card border-0 shadow-sm p-4 rounded-4 bg-white mb-4">
+        <div class="d-flex align-items-center gap-3">
+            <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-3 shadow-sm"
+                 style="width: 65px; height: 65px; background-color: #ff6b00;">
+                @(string.IsNullOrEmpty(Model.Name) ? "U" : Model.Name.Substring(0, 1).ToUpper())
+            </div>
+            <div>
+                <h4 class="fw-bold mb-1 text-dark">@Model.Name</h4>
+                <div class="d-flex gap-3 text-muted small flex-wrap">
+                    <span><i class="bi bi-person me-1"></i>@Model.UserName</span>
+                    <span><i class="bi bi-envelope me-1"></i>@Model.Email</span>
+                    <span><i class="bi bi-telephone me-1"></i>@(string.IsNullOrEmpty(Model.PhoneNumber) ? "Belirtilmedi" : Model.PhoneNumber)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success border-0 rounded-pill text-center py-2 mb-4 small fw-semibold">
+            <i class="bi bi-check-circle-fill me-1"></i> @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="row g-4">
+        <div class="col-lg-3">
+            <div class="nav flex-column nav-pills custom-pills bg-white p-3 rounded-4 shadow-sm" id="v-pills-tab" role="tablist">
+                <button class="nav-link active text-start py-3 px-3 mb-2 rounded-3" id="gidecegim-tab" data-bs-toggle="pill" data-bs-target="#gidecegim" type="button" role="tab">
+                    <i class="bi bi-suitcase-lg me-2"></i> Gideceğim Turlar
+                </button>
+                <button class="nav-link text-start py-3 px-3 mb-2 rounded-3" id="gittigim-tab" data-bs-toggle="pill" data-bs-target="#gittigim" type="button" role="tab">
+                    <i class="bi bi-check2-square me-2"></i> Gittiğim Turlar
+                </button>
+                <button class="nav-link text-start py-3 px-3 rounded-3" id="ayarlar-tab" data-bs-toggle="pill" data-bs-target="#ayarlar" type="button" role="tab">
+                    <i class="bi bi-gear me-2"></i> Hesap Ayarları
+                </button>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <div class="tab-content bg-white p-4 rounded-4 shadow-sm" id="v-pills-tabContent">
+
+
+                <div class="tab-pane fade show active" id="gidecegim" role="tabpanel">
+                    <h5 class="fw-bold mb-4 text-dark"><i class="bi bi-calendar-event me-2" style="color:#ff6b00 !important;"></i>Yaklaşan Turlarım</h5>
+
+                    @if (upcomingTours != null && upcomingTours.Any())
+                    {
+                        foreach (var tour in upcomingTours)
+                        {
+                            <div class="border rounded-3 p-3 mb-3 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-compass fs-2" style="color:#ff6b00 !important;"></i>
+                                    <div>
+                                        <h6 class="fw-bold m-0 text-dark">@tour.Title</h6>
+                                        <span class="text-muted small"><i class="bi bi-clock me-1"></i>Tarih: @tour.TourTime.ToString("dd.MM.yyyy")</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill">Onaylandı</span>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-center py-4 text-muted">
+                            <i class="bi bi-emoji-smile fs-2 d-block mb-2"></i>
+                            <span>Henüz yaklaşan bir tur rezervasyonunuz bulunmuyor.</span>
+                        </div>
+                    }
+                </div>
+
+                <div class="tab-pane fade" id="gittigim" role="tabpanel">
+                    <h5 class="fw-bold mb-4 text-dark"><i class="bi bi-patch-check me-2" style="color:#ff6b00 !important;"></i>Tamamlanan Turlarım</h5>
+
+                    @if (completedTours != null && completedTours.Any())
+                    {
+                        foreach (var tour in completedTours)
+                        {
+                            <div class="border rounded-3 p-3 mb-3 d-flex align-items-center justify-content-between flex-wrap gap-3 bg-light">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-card-checklist fs-2 text-muted"></i>
+                                    <div>
+                                        <h6 class="fw-bold m-0 text-dark">@tour.Title</h6>
+                                        <span class="text-muted small"><i class="bi bi-calendar-check me-1"></i>Tarih: @tour.TourTime.ToString("dd.MM.yyyy")</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-secondary px-3 py-2 rounded-pill">Tamamlandı</span>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-center py-4 text-muted">
+                            <i class="bi bi-folder2-open fs-2 d-block mb-2"></i>
+                            <span>Geçmişte tamamlanmış bir turunuz bulunmuyor.</span>
+                        </div>
+                    }
+                </div>
+
+                <!-- 3. HESAP AYARLARI SEKMESİ -->
+                <div class="tab-pane fade" id="ayarlar" role="tabpanel">
+                    <h5 class="fw-bold mb-4 text-dark"><i class="bi bi-person-lines-fill me-2" style="color:#ff6b00 !important;"></i>Hesap Bilgilerini Güncelle</h5>
+
+                    @using (Html.BeginForm("UpdateProfile", "Profile", FormMethod.Post))
+                    {
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold">Ad Soyad</label>
+                                <input type="text" name="Name" class="form-control py-2" value="@Model.Name" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold">Kullanıcı Adı</label>
+                                <input type="text" name="UserName" class="form-control py-2" value="@Model.UserName" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold">E-posta Adresi</label>
+                                <input type="email" name="Email" class="form-control py-2" value="@Model.Email" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold">Telefon Numarası</label>
+                                <input type="text" name="PhoneNumber" class="form-control py-2" value="@Model.PhoneNumber" placeholder="05XX XXX XX XX" />
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label small fw-semibold">Yeni Şifre (Değiştirmek istemiyorsanız boş bırakın)</label>
+                                <input type="password" name="NewPassword" class="form-control py-2" placeholder="••••••••" />
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn text-white fw-bold px-4 py-2 rounded-pill shadow-sm" style="background-color: #ff6b00; border:none;">
+                                    Değişiklikleri Kaydet
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-pills .nav-link {
+        color: #495057;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+        .custom-pills .nav-link.active {
+            background-color: #ff6b00 !important;
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+        }
+
+        .custom-pills .nav-link:hover:not(.active) {
+            background-color: #f8f9fa;
+            color: #ff6b00;
+        }
+</style>

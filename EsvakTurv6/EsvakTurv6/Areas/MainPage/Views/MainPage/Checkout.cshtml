@@ -39,7 +39,9 @@
                 </h5>
 
                 <form id="paymentForm">
-                    <input type="hidden" id="tourId" value="@Model.ID" />
+
+                    <input type="hidden" id="tourID" value="@Model.ID" />
+                    <input type="hidden" id="userID" value="@Session["UserID"]" />
                     <input type="hidden" id="amount" value="@Model.Price" />
 
                     <div class="mb-3">
@@ -73,18 +75,23 @@
     </div>
 </div>
 
-<!--JS -->
+<!-- JS -->
 <script>
     document.getElementById("payButton").addEventListener("click", function (e) {
         e.preventDefault();
 
+        const tourIDEl = document.getElementById("tourID");
+        const userIDEl = document.getElementById("userID");
+        const amountEl = document.getElementById("amount");
+
         const data = {
-            TourId: parseInt(document.getElementById("tourId").value),
+            TourID: tourIDEl ? parseInt(tourIDEl.value) : 0,
+            UserID: userIDEl ? parseInt(userIDEl.value) : 0,
             CardHolderName: document.getElementById("cardHolder").value,
             CardNumber: document.getElementById("cardNumber").value,
             ExpireDate: document.getElementById("expireDate").value,
             Cvc: document.getElementById("cvc").value,
-            Amount: parseFloat(document.getElementById("amount").value)
+            Amount: amountEl ? parseFloat(amountEl.value) : 0
         };
 
         fetch('/api/payment/process', {
@@ -97,10 +104,10 @@
         .then(response => response.json())
         .then(result => {
             if (result.IsSuccess) {
-                alert(" ÖDEME BAŞARILI!\n" + result.Message + "\nİşlem Referans No: " + result.TransactionId);
+                alert("ÖDEME BAŞARILI!\n" + result.Message + "\nİşlem Referans No: " + result.TransactionId);
                 window.location.href = '@Url.Action("Index", "MainPage")';
             } else {
-                alert(" ÖDEME BAŞARISIZ:\n" + result.Message);
+                alert("ÖDEME BAŞARISIZ:\n" + result.Message);
             }
         })
         .catch(error => {
@@ -110,9 +117,5 @@
     });
 </script>
 
-
-
-
-
-@*Şayet bir gün çaresiz kalırsanız, bir kurtarıcı beklemeyin. Kurtarıcı kendiniz olun.
-    -Mustafa Kemal Atatürk.*@
+@* Şayet bir gün çaresiz kalırsanız, bir kurtarıcı beklemeyin. Kurtarıcı kendiniz olun.
+    - Mustafa Kemal Atatürk. *@

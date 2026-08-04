@@ -8,6 +8,7 @@ namespace EsvakTurv6.Models
     public class PaymentRequestDto
     {
         public int TourID { get; set; }
+        public int UserID { get; set; }
         public string CardHolderName { get; set; }
         public string CardNumber { get; set; }
         public string ExpireDate { get; set; }

@@ -9,6 +9,6 @@ namespace EsvakTurv6.Models
     {
         public bool IsSuccess { get; set; }
         public string Message { get; set; }
-        public string TransactionId { get; set; }
+        public string TransactionID { get; set; }
     }
 }

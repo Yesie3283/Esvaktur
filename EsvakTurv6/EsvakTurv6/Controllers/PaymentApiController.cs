@@ -1,9 +1,10 @@
-﻿using System;
+﻿using EsvakTurv6.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using EsvakTurv6.Models;
+using System.Web.Util;
 
 namespace EsvakTurv6.Controllers
 {
@@ -41,11 +42,27 @@ namespace EsvakTurv6.Controllers
 
 
 
+            try
+            {
+                Bookings newBooking = new Bookings
+                {
+                    TourID = request.TourID,
+                    UserID = request.UserID,
+                    BookingDate = DateTime.Now
+                };
+                db.Bookings.Add(newBooking);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                
+            }
+
             return Ok(new PaymentResponseDto
             {
                 IsSuccess = true,
-                Message = "Ödeme başarılı.",
-                TransactionId = transectionId
+                Message = "Ödeme başarıyla gerçekleşti!",
+                TransactionID = transectionId
             });
 
         }
