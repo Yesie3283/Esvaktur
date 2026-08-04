@@ -46,6 +46,17 @@ namespace EsvakTurv6.Areas.MainPage.Controllers
         {
             return View();
         }
+
+        public ActionResult Checkout(int id)
+        {
+            var tour = db.Tours.Find(id);
+            if (tour == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(tour);
+        }
     }
 }
 

@@ -32,7 +32,7 @@ namespace EsvakTurv6.Areas.ManagerPanel.Controllers
             {
                 return HttpNotFound();
             }
-            return View(category); // Bulunan kategoriyi sayfaya gönderiyoruz
+            return View(category); 
         }
 
 
@@ -73,19 +73,19 @@ namespace EsvakTurv6.Areas.ManagerPanel.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(TourCategories category) // Model adın TourCategories olduğu için
+        public ActionResult Edit(TourCategories category) 
         {
             if (ModelState.IsValid)
             {
-                // EF'e bu kaydın güncelleneceğini söylüyoruz
+      
                 db.Entry(category).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
 
-                // Burası liste sayfasına geri dönmeni sağlar
+               
                 return RedirectToAction("Index", "TourCategory", new { area = "ManagerPanel" });
             }
 
-            // Eğer hata varsa liste sayfasına dönmez, yine aynı View'u açar!
+
             return View(category);
         }
 

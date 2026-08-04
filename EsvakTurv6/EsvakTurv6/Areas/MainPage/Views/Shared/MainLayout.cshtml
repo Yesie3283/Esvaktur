@@ -10,16 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        html, body {
+            height: 100%;
+        }
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #f8f9fa;
             color: #212529;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            background-color: #111926;
+            color: #a0aec0;
+            flex-shrink: 0;
         }
 
         .navbar {
             backdrop-filter: blur(10px);
             background-color: rgba(255, 255, 255, 0.9) !important;
             transition: all 0.3s ease;
+            z-index: 1030;
+        }
+
+        .dropdown-menu {
+            z-index: 1050 !important;
         }
 
         .nav-link {
@@ -33,25 +55,20 @@
                 color: #ff6b00 !important;
             }
 
-        footer {
-            background-color: #111926;
-            color: #a0aec0;
+        footer h5 {
+            color: #ffffff;
+            font-weight: 600;
         }
 
-            footer h5 {
-                color: #ffffff;
-                font-weight: 600;
-            }
+        footer a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
 
-            footer a {
-                color: #a0aec0;
-                text-decoration: none;
-                transition: color 0.2s;
+            footer a:hover {
+                color: #ff6b00;
             }
-
-                footer a:hover {
-                    color: #ff6b00;
-                }
 
         .brand-logo-text {
             display: none;
@@ -77,7 +94,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto gap-2">
                     <li class="nav-item"><a class="nav-link active" href="@Url.Action("Index", "MainPage")">Ana Sayfa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Turlarımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "SeeTours", new { area = "MainPage" })">Turlarımız</a></li>
                     <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "SeeCategories", new { area = "MainPage" })">Kategoriler</a></li>
                     <li class="nav-item"><a class="nav-link" href="@Url.Action("ContactInf", "MainPage", new { area = "MainPage" })">İletişim</a></li>
                 </ul>
@@ -85,10 +102,10 @@
                 @if (Session["UserID"] != null)
                 {
                     <div class="dropdown ms-lg-3">
-                        <button class="btn btn-outline-dark btn-sm rounded-pill px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-outline-dark btn-sm rounded-pill px-3 dropdown-toggle" type="button" id="userMenuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle me-1"></i> @Session["UserName"]
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2 py-2" aria-labelledby="userMenuDropdown">
                             <li>
                                 <a class="dropdown-item text-danger small" href="@Url.Action("Logout", "Register")">
                                     <i class="bi bi-box-arrow-right me-2"></i>Çıkış Yap
@@ -112,8 +129,7 @@
         @RenderBody()
     </main>
 
-   
-    <footer class="py-4 mt-5">
+    <footer class="py-4 mt-auto">
         <div class="container">
             <div class="row g-4 justify-content-between align-items-center">
                 <div class="col-md-5" id="footerBrand">
@@ -127,7 +143,7 @@
                 <div class="col-md-4 text-md-end">
                     <ul class="list-inline mb-2 small">
                         <li class="list-inline-item me-3"><a href="@Url.Action("Index", "MainPage")">Ana Sayfa</a></li>
-                        <li class="list-inline-item me-3"><a href="#">Turlarımız</a></li>
+                        <li class="list-inline-item me-3"><a href="@Url.Action("Index", "SeeTours", new { area = "MainPage" })">Turlarımız</a></li>
                         <li class="list-inline-item"><a href="@Url.Action("ContactInf", "MainPage", new { area = "MainPage" })">İletişim</a></li>
                     </ul>
                     <p class="small text-muted m-0">&copy; @DateTime.Now.Year EsvakTour. Tüm hakları saklıdır.</p>

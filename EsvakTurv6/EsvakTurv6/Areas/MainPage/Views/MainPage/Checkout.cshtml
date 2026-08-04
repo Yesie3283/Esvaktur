@@ -1,0 +1,118 @@
+﻿@model EsvakTurv6.Models.Tours
+
+@{
+    ViewBag.Title = "Ödeme Yap";
+    Layout = "~/Areas/MainPage/Views/Shared/MainLayout.cshtml";
+}
+
+<div class="container my-5 py-4">
+    <div class="row g-4 justify-content-center">
+
+        <div class="col-md-5">
+            <div class="card border-0 shadow-sm rounded-3 p-4 bg-white">
+                <h5 class="fw-bold text-dark mb-3">Sipariş Özeti</h5>
+                <hr class="opacity-25">
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-muted">Tur Adı:</span>
+                    <span class="fw-bold text-dark">@Model.Title</span>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <span class="text-muted">Tarih:</span>
+                    <span><i class="bi bi-calendar3 me-1 text-primary"></i>@Model.TourTime.ToString("dd.MM.yyyy")</span>
+                </div>
+
+                <hr class="opacity-25">
+
+                <div class="d-flex justify-content-between fs-5 fw-bold align-items-center">
+                    <span>Toplam Tutar:</span>
+                    <span style="color: #ff6b00;" class="fs-3">₺@string.Format("{0:N0}", Model.Price)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-3 p-4 bg-white">
+                <h5 class="fw-bold text-dark mb-4">
+                    <i class="bi bi-credit-card-2-front me-2 text-warning" style="color: #ff6b00 !important;"></i>Kart Bilgileri
+                </h5>
+
+                <form id="paymentForm">
+                    <input type="hidden" id="tourId" value="@Model.ID" />
+                    <input type="hidden" id="amount" value="@Model.Price" />
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold">Kart Üzerindeki İsim</label>
+                        <input type="text" id="cardHolder" class="form-control py-2" placeholder="Ahmet Yılmaz" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold">Kart Numarası</label>
+                        <input type="text" id="cardNumber" class="form-control py-2" placeholder="1234 5678 9012 3456" maxlength="19" required />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mb-4">
+                            <label class="form-label small fw-semibold">Son Kullanma (AA/YY)</label>
+                            <input type="text" id="expireDate" class="form-control py-2" placeholder="12/28" maxlength="5" required />
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label class="form-label small fw-semibold">CVC / CVV</label>
+                            <input type="text" id="cvc" class="form-control py-2" placeholder="123" maxlength="3" required />
+                        </div>
+                    </div>
+
+                    <button type="button" id="payButton" class="btn w-100 text-white fw-bold py-2 rounded-pill shadow-sm" style="background-color: #ff6b00;">
+                        ₺@string.Format("{0:N0}", Model.Price) Öde ve İşlemi Tamamla
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--JS -->
+<script>
+    document.getElementById("payButton").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const data = {
+            TourId: parseInt(document.getElementById("tourId").value),
+            CardHolderName: document.getElementById("cardHolder").value,
+            CardNumber: document.getElementById("cardNumber").value,
+            ExpireDate: document.getElementById("expireDate").value,
+            Cvc: document.getElementById("cvc").value,
+            Amount: parseFloat(document.getElementById("amount").value)
+        };
+
+        fetch('/api/payment/process', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.IsSuccess) {
+                alert(" ÖDEME BAŞARILI!\n" + result.Message + "\nİşlem Referans No: " + result.TransactionId);
+                window.location.href = '@Url.Action("Index", "MainPage")';
+            } else {
+                alert(" ÖDEME BAŞARISIZ:\n" + result.Message);
+            }
+        })
+        .catch(error => {
+            console.error('API Hatası:', error);
+            alert("API ile iletişim kurulurken bir hata oluştu!");
+        });
+    });
+</script>
+
+
+
+
+
+@*Şayet bir gün çaresiz kalırsanız, bir kurtarıcı beklemeyin. Kurtarıcı kendiniz olun.
+    -Mustafa Kemal Atatürk.*@
