@@ -1,0 +1,249 @@
+﻿@model IEnumerable<EsvakTurv6.Models.Tours>
+
+@{
+    ViewBag.Title = "Ana Sayfa";
+    Layout = "~/Areas/MainPage/Views/Shared/MainLayout.cshtml";
+    var featuredTours = ViewBag.FeaturedTours as List<EsvakTurv6.Models.Tours>;
+}
+
+<style>
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-box {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 100px;
+        padding: 10px;
+    }
+
+    .search-input {
+        background: transparent !important;
+        border: none !important;
+        color: white !important;
+    }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+    .tour-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: rgba(255, 107, 0, 0.95);
+        color: white;
+        font-weight: 600;
+        font-size: 0.75rem;
+        padding: 6px 14px;
+        border-radius: 50px;
+        z-index: 2;
+    }
+
+    .card-img-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px 12px 0 0;
+        height: 240px;
+    }
+
+    .card-img-top {
+        transition: transform 0.5s ease;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+            .hover-card:hover .card-img-top {
+                transform: scale(1.08);
+            }
+
+    .features-icon-box {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(255, 107, 0, 0.1);
+        color: #ff6b00;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 1.8rem;
+        transition: 0.3s;
+    }
+
+    .features-card:hover .features-icon-box {
+        background-color: #ff6b00;
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    .stats-section {
+        background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+
+<section class="hero-section text-center text-white mb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <span class="badge text-uppercase mb-3 px-3 py-2" style="background-color: #ff6b00;">Dünyayı Bizimle Keşfedin</span>
+                <h1 class="display-3 fw-bold mb-3" style="letter-spacing: -1px;">Hayalindeki Rotayı Bul</h1>
+                <p class="lead mb-4 text-white-50">Kültür turlarından hafta sonu kaçamaklarına kadar en özel seyahat deneyimleri sizi bekliyor.</p>
+
+                @using (Html.BeginForm("Search", "Tours", FormMethod.Get, new { @class = "search-box max-width-600 mx-auto mt-4" }))
+                {
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent border-0 text-white"><i class="bi bi-search fs-5"></i></span>
+                        <input type="text" name="query" class="form-control search-input ps-2" placeholder="Gitmek istediğiniz yeri veya turu arayın...">
+                        <button type="submit" class="btn rounded-pill px-4 text-white fw-bold ms-2" style="background-color: #ff6b00; border: none;">Arayın</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5 py-4">
+    <div class="text-center mb-5">
+        <span class="text-uppercase fw-bold small" style="color: #ff6b00;">Esvak Tur Ayrıcalıkları</span>
+        <h2 class="fw-bold text-dark mt-1">Neden Bizimle Seyahat Etmelisiniz?</h2>
+    </div>
+    <div class="row g-4 text-center">
+        <div class="col-md-4 features-card">
+            <div class="card h-100 border-0 p-4 shadow-sm rounded-3 hover-card">
+                <div class="features-icon-box"><i class="bi bi-shield-check"></i></div>
+                <h5 class="fw-bold text-dark">Güvenli Seyahat</h5>
+                <p class="text-muted small m-0">Tüm turlarımız TURSAB güvencesi altında ve seyahat sigortalıdır.</p>
+            </div>
+        </div>
+        <div class="col-md-4 features-card">
+            <div class="card h-100 border-0 p-4 shadow-sm rounded-3 hover-card">
+                <div class="features-icon-box"><i class="bi bi-wallet2"></i></div>
+                <h5 class="fw-bold text-dark">En Uygun Fiyat</h5>
+                <p class="text-muted small m-0">Kaliteli hizmeti, bütçenizi zorlamadan en avantajlı fiyatlarla sunuyoruz.</p>
+            </div>
+        </div>
+        <div class="col-md-4 features-card">
+            <div class="card h-100 border-0 p-4 shadow-sm rounded-3 hover-card">
+                <div class="features-icon-box"><i class="bi bi-headset"></i></div>
+                <h5 class="fw-bold text-dark">7/24 Kesintisiz Destek</h5>
+                <p class="text-muted small m-0">Seyahatiniz boyunca iletişim ekibimizle her an yanınızdayız.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5 py-4">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+            <span class="text-uppercase fw-bold small" style="color: #ff6b00;">Keşfe Çıkın</span>
+            <h2 class="text-dark fw-bold m-0 mt-1">Sizin İçin Seçtiğimiz Özel Turlar</h2>
+        </div>
+        <a href="@Url.Action("AllTours", "Tours")" class="btn btn-outline-dark btn-sm rounded-pill px-4 py-2 fw-semibold">Tümünü Gör <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+
+    <div class="row g-4">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var tour in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0 rounded-3 hover-card bg-white">
+
+                        @if (tour.TourCategories != null)
+                        {
+                            <div class="tour-badge text-uppercase">@tour.TourCategories.Name</div>
+                        }
+
+                        <div class="card-img-wrapper">
+                            @if (!string.IsNullOrEmpty(tour.ImagePath))
+                            {
+                                <img src="@tour.ImagePath" class="card-img-top" alt="@tour.Title">
+                            }
+                            else
+                            {
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Varsayılan Resim">
+                            }
+                        </div>
+
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="card-title fw-bold text-dark mb-2">@tour.Title</h5>
+
+                            <p class="card-text text-muted small flex-grow-1">
+                                @if (tour.Description != null)
+                                {
+                                    @(tour.Description.Length > 100 ? tour.Description.Substring(0, 100) + "..." : tour.Description)
+                                }
+                            </p>
+
+                            <hr class="text-muted opacity-25 my-3">
+
+                            <div class="d-flex align-items-center justify-content-between mt-auto">
+                                <div class="text-secondary small">
+                                    <i class="bi bi-calendar3 me-1 text-primary"></i>
+                                    @tour.TourTime.ToString("dd.MM.yyyy")
+                                </div>
+                                <div class="text-end">
+                                    <span class="fs-5 text-muted fw-bold">₺</span><span class="fs-4 fw-bold text-dark">@string.Format("{0:N0}", tour.Price)</span>
+                                </div>
+                            </div>
+
+                            <a href="@Url.Action("Details", "MainPage", new { id = tour.ID })" class="btn btn-light btn-sm w-100 rounded-pill mt-3 fw-semibold text-secondary py-2 border">Detayları İncele</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center py-5">
+                <i class="bi bi-airplane fs-1 text-muted"></i>
+                <p class="text-muted mt-2">Henüz aktif bir tur bulunamadı.</p>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="stats-section text-white mt-5 py-5">
+    <div class="container py-4">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3">
+                <h1 class="display-4 fw-bold" style="color: #ff6b00;">@(ViewBag.TotalTours ?? 12)+</h1>
+                <p class="text-white-50 small text-uppercase fw-semibold m-0">Aktif Tur Rotası</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <h1 class="display-4 fw-bold" style="color: #ff6b00;">@(ViewBag.TotalCategories ?? 5)+</h1>
+                <p class="text-white-50 small text-uppercase fw-semibold m-0">Farklı Tur Kategorisi</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <h1 class="display-4 fw-bold" style="color: #ff6b00;">4,8</h1>
+                <p class="text-white-50 small text-uppercase fw-semibold m-0">Müşteri Memnuniyeti</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <h1 class="display-4 fw-bold" style="color: #ff6b00;">10K+</h1>
+                <p class="text-white-50 small text-uppercase fw-semibold m-0">Mutlu Gezgin</p>
+            </div>
+        </div>
+    </div>
+</section>

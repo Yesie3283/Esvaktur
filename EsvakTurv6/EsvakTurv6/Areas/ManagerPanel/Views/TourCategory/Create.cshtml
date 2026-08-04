@@ -1,0 +1,62 @@
+﻿@model EsvakTurv6.Models.TourCategories
+
+@{
+    ViewBag.Title = "Add New Tour Category";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/ManagerPanelLayout.cshtml";
+}
+
+<div class="container mt-4" style="max-width: 800px;">
+    <div class="mb-4">
+        <a href="@Url.Action("Index", "TourCategory", new { area = "ManagerPanel" })" class="btn btn-link text-decoration-none p-0 text-muted mb-2">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+        <h3 class="text-dark fw-bold m-0">Create Tour Category</h3>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+            @using (Html.BeginForm("Create", "TourCategory", new { area = "ManagerPanel" }, FormMethod.Post, new { @class = "needs-validation" }))
+            {
+                @Html.AntiForgeryToken()
+
+                if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i> Please correct the errors below.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                <div class="mb-3">
+                    <label for="Name" class="form-label fw-semibold text-secondary">Category Name</label>
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter category name (3-50 chars)...", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger small mt-1 d-block" })
+                </div>
+
+                <div class="mb-3">
+                    <label for="Description" class="form-label fw-semibold text-secondary">Description</label>
+                    @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "4", placeholder = "Enter description (Min 10, Max 200 chars)..." })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger small mt-1 d-block" })
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label d-block fw-semibold text-secondary">Status</label>
+                    <div class="form-check form-switch p-0 ps-5">
+                        @Html.CheckBoxFor(model => model.IsActive, new { @class = "form-check-input", id = "IsActiveSwitch", @checked = "checked" })
+                        <label class="form-check-label text-muted small" for="IsActiveSwitch">Should this category be active on the website?</label>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger small mt-1 d-block" })
+                </div>
+
+                <hr class="text-muted my-4">
+
+                <div class="d-flex justify-content-end gap-2">
+                    <a href="@Url.Action("Index", "TourCategory", new { area = "ManagerPanel" })" class="btn btn-light px-4">Cancel</a>
+                    <button type="submit" class="btn btn-primary px-4 d-flex align-items-center gap-2">
+                        <i class="bi bi-check-circle"></i> Save Category
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+﻿@model EsvakTurv6.Models.Tours
+
+@{
+    ViewBag.Title = Model.Title + " - Tur Detayı";
+    Layout = "~/Areas/MainPage/Views/Shared/MainLayout.cshtml";
+}
+
+<style>
+    .details-hero {
+        position: relative;
+        height: 450px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .details-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .price-badge {
+        background-color: #ff6b00;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: inline-block;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="mb-4">
+        <a href="javascript:history.back()" class="btn btn-outline-dark btn-sm rounded-pill px-3">
+            <i class="bi bi-arrow-left me-1"></i> Geri Dön
+        </a>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-lg-8">
+            <div class="details-hero shadow-sm mb-4">
+                @if (Model.TourCategories != null)
+                {
+                    <span class="badge position-absolute top-0 start-0 m-3 text-uppercase px-3 py-2" style="background-color: #ff6b00; z-index: 2;">
+                        @Model.TourCategories.Name
+                    </span>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.ImagePath))
+                {
+                    <img src="@Model.ImagePath" class="details-img" alt="@Model.Title">
+                }
+                else
+                {
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" class="details-img" alt="Varsayılan Resim">
+                }
+            </div>
+
+            <h1 class="display-5 fw-bold text-dark mb-3">@Model.Title</h1>
+
+            <div class="d-flex align-items-center gap-4 text-muted mb-4">
+                <div>
+                    <i class="bi bi-calendar3 me-1 text-primary"></i>
+                    <strong>Tur Tarihi:</strong> @Model.TourTime.ToString("dd.MM.yyyy")
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+
+
+            <div class="mt-4">
+                <h3 class="fw-bold text-dark mb-3">Tur Açıklaması</h3>
+                <p class="text-secondary lead" style="white-space: pre-line; line-height: 1.8;">
+                    @Model.Description
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-sm p-4 rounded-3 bg-white sticky-top" style="top: 20px;">
+                <div class="text-center mb-4">
+                    <span class="text-muted d-block small text-uppercase fw-semibold mb-1">Kişi Başı Fiyat</span>
+                    <div class="price-badge shadow-sm">
+                        <span>₺</span>@string.Format("{0:N0}", Model.Price)
+                    </div>
+                </div>
+
+                <div class="border-top pt-4">
+                    <div class="d-flex justify-content-between mb-2 small text-muted">
+                        <span>Kontenjan:</span>
+                        <span class="fw-bold text-dark">Sınırlı Sayıda</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-4 small text-muted">
+                        <span>Ödeme Seçeneği:</span>
+                        <span class="fw-bold text-dark">Kredi Kartı / Havale</span>
+                    </div>
+
+                    <a href="@Url.Action("Checkout", "MainPage", new { id = Model.ID, area = "MainPage" })"
+                       class="btn w-100 rounded-pill py-3 fw-bold text-white shadow-sm d-block text-center text-decoration-none"
+                       style="background-color: #ff6b00; border: none;">
+                        Rezervasyon Yap <i class="bi bi-chevron-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

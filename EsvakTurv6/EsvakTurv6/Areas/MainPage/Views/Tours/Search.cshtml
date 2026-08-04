@@ -1,0 +1,123 @@
+﻿@model IEnumerable<EsvakTurv6.Models.Tours>
+
+@{
+    ViewBag.Title = "Arama Sonuçları";
+    Layout = "~/Areas/MainPage/Views/Shared/MainLayout.cshtml";
+}
+
+<style>
+    .tour-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: rgba(255, 107, 0, 0.95);
+        color: white;
+        font-weight: 600;
+        font-size: 0.75rem;
+        padding: 6px 14px;
+        border-radius: 50px;
+        z-index: 2;
+    }
+
+    .card-img-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px 12px 0 0;
+        height: 240px;
+    }
+
+    .card-img-top {
+        transition: transform 0.5s ease;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+            .hover-card:hover .card-img-top {
+                transform: scale(1.08);
+            }
+</style>
+
+<section class="container my-5">
+    <div class="mb-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "MainPage")" class="text-decoration-none text-muted">Ana Sayfa</a></li>
+                <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">Arama Sonuçları</li>
+            </ol>
+        </nav>
+        <h2 class="text-dark fw-bold m-0">"<span>@ViewBag.SearchQuery</span>" İçin Sonuçlar</h2>
+        <p class="text-muted small m-0">Toplam @Model.Count() tur bulundu.</p>
+    </div>
+
+    <div class="row g-4">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var tour in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0 rounded-3 hover-card bg-white">
+                        @if (tour.TourCategories != null)
+                        {
+                            <div class="tour-badge text-uppercase">@tour.TourCategories.Name</div>
+                        }
+                        @*İ*@
+                        <div class="card-img-wrapper">
+                            @if (!string.IsNullOrEmpty(tour.ImagePath))
+                            {
+                                <img src="@tour.ImagePath" class="card-img-top" alt="@tour.Title">
+                            }
+                            else
+                            {
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Varsayılan Resim">
+                            }
+                        </div>
+
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="card-title fw-bold text-dark mb-2">@tour.Title</h5>
+                            <p class="card-text text-muted small flex-grow-1">
+                                @if (tour.Description != null)
+                                {
+                                    @(tour.Description.Length > 100 ? tour.Description.Substring(0, 100) + "..." : tour.Description)
+                                }
+                            </p>
+
+                            <hr class="text-muted opacity-25 my-3">
+
+                            <div class="d-flex align-items-center justify-content-between mt-auto">
+                                <div class="text-secondary small">
+                                    <i class="bi bi-calendar3 me-1 text-primary"></i>
+                                    @tour.TourTime.ToString("dd.MM.yyyy")
+                                </div>
+                                <div class="text-end">
+                                    <span class="fs-5 text-muted fw-bold">₺</span><span class="fs-4 fw-bold text-dark">@string.Format("{0:N0}", tour.Price)</span>
+                                </div>
+                            </div>
+                            <a href="@Url.Action("Details", "MainPage", new { id = tour.ID })" class="btn btn-light btn-sm w-100 rounded-pill mt-3 fw-semibold text-secondary py-2 border">Detayları İncele</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center py-5 bg-white rounded-3 shadow-sm border">
+                <div class="py-4">
+                    <i class="bi bi-search fs-1 text-muted d-block mb-3"></i>
+                    <h4 class="fw-bold text-dark">Eşleşen Tur Bulunamadı</h4>
+                    <p class="text-muted small px-3">Aradığınız kriterlere uygun aktif bir turumuz bulunmamaktadır. Farklı kelimelerle tekrar aramayı deneyebilirsiniz.</p>
+                    <a href="@Url.Action("Index", "MainPage")" class="btn btn-warning rounded-pill px-4 text-white fw-bold mt-2" style="background-color: #ff6b00; border: none;">Ana Sayfaya Dön</a>
+                </div>
+            </div>
+        }
+    </div>
+</section>

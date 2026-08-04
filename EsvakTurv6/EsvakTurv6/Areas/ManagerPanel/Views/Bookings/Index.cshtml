@@ -1,0 +1,126 @@
+﻿@model IEnumerable<EsvakTurv6.Models.Bookings>
+
+@{
+    ViewBag.Title = "Rezervasyon Yönetimi";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/ManagerPanelLayout.cshtml";
+}
+
+<div class="container-fluid py-2">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div>
+            <h3 class="fw-bold text-dark m-0">
+                <i class="bi bi-journal-check me-2" style="color:#ff6b00;"></i>Rezervasyon Operasyonu
+            </h3>
+            <p class="text-muted small m-0">Satın alınan tüm turları ve müşteri detaylarını buradan takip edebilirsiniz.</p>
+        </div>
+
+        <div class="d-flex gap-2">
+            <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill fs-6">
+                Yaklaşan: @ViewBag.UpcomingCount Tur
+            </span>
+            <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-3 py-2 rounded-pill fs-6">
+                Tamamlanan: @ViewBag.CompletedCount Tur
+            </span>
+            <span class="badge bg-dark px-3 py-2 rounded-pill fs-6">
+                Toplam: @ViewBag.TotalBookings Kayıt
+            </span>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success border-0 rounded-3 shadow-sm py-2 mb-4 small fw-semibold">
+            <i class="bi bi-check-circle-fill me-1"></i> @TempData["SuccessMessage"]
+        </div>
+    }
+
+
+    <div class="card border-0 shadow-sm rounded-4 bg-white overflow-hidden">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-4">#ID</th>
+                        <th>Müşteri Bilgileri</th>
+                        <th>Satın Alınan Tur</th>
+                        <th>Tur Tarihi</th>
+                        <th>Satın Alma Tarihi</th>
+                        <th>Durum</th>
+                        <th class="text-end pe-4">İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            bool isUpcoming = item.Tour != null && item.Tour.TourTime >= DateTime.Now;
+                            <tr>
+                                <td class="ps-4 fw-bold text-secondary">#@item.ID</td>
+
+
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <strong class="text-dark">@(item.User != null ? item.User.Name : "Bilinmeyen Müşteri")</strong>
+                                        <span class="text-muted extra-small" style="font-size:0.8rem;">
+                                            <i class="bi bi-person me-1"></i>@(item.User != null ? item.User.UserName : "-") |
+                                            <i class="bi bi-telephone me-1"></i>@(item.User != null ? item.User.PhoneNumber : "-")
+                                        </span>
+                                    </div>
+                                </td>
+
+
+                                <td>
+                                    <span class="fw-semibold text-dark">@(item.Tour != null ? item.Tour.Title : "Tur Silinmiş")</span>
+                                </td>
+
+
+                                <td>
+                                    <span class="badge bg-light text-dark border px-2 py-1">
+                                        <i class="bi bi-calendar-event me-1" style="color:#ff6b00;"></i>
+                                        @(item.Tour != null ? item.Tour.TourTime.ToString("dd.MM.yyyy") : "-")
+                                    </span>
+                                </td>
+
+   
+                                <td class="small text-muted">
+                                    @item.BookingDate.ToString("dd.MM.yyyy HH:mm")
+                                </td>
+
+
+                                <td>
+                                    @if (isUpcoming)
+                                    {
+                                        <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-1 rounded-pill">Yaklaşan Tur</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-3 py-1 rounded-pill">Tamamlandı</span>
+                                    }
+                                </td>
+
+
+                                <td class="text-end pe-4">
+                                    <a href="@Url.Action("Delete", "Bookings", new { id = item.ID, area = "ManagerPanel" })"
+                                       class="btn btn-outline-danger btn-sm rounded-pill px-3"
+                                       onclick="return confirm('#@item.ID numaralı rezervasyonu silmek istediğinize emin misiniz?');">
+                                        <i class="bi bi-trash me-1"></i> Sil
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center py-5 text-muted">
+                                <i class="bi bi-inbox fs-1 d-block mb-2 text-secondary opacity-50"></i>
+                                Henüz kaydedilmiş hiçbir rezervasyon bulunmuyor.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

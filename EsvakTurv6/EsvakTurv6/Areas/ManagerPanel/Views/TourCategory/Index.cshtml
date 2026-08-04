@@ -1,0 +1,108 @@
+﻿@model IEnumerable<EsvakTurv6.Models.TourCategories>
+
+@{
+    ViewBag.Title = "Kategoriler";
+    Layout = "~/Areas/ManagerPanel/Views/Shared/ManagerPanelLayout.cshtml";
+}
+
+<div class="container-fluid py-2">
+
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div>
+            <h3 class="fw-bold text-dark m-0">
+                <i class="bi bi-tags me-2" style="color:#ff6b00;"></i>Tur Kategorileri
+            </h3>
+            <p class="text-muted small m-0">Turlarınız için oluşturulmuş kategorileri buradan yönetebilirsiniz.</p>
+        </div>
+        <a href="@Url.Action("Create", "TourCategory", new { area = "ManagerPanel" })"
+           class="btn text-white fw-semibold px-4 py-2 rounded-pill shadow-sm d-flex align-items-center gap-2"
+           style="background-color: #ff6b00; border: none;">
+            <i class="bi bi-plus-circle-fill"></i> Yeni Kategori Ekle
+        </a>
+    </div>
+
+
+    <div class="card border-0 shadow-sm rounded-4 bg-white overflow-hidden">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-4" style="width: 10%">#ID</th>
+                        <th style="width: 25%">Kategori Adı</th>
+                        <th style="width: 35%">Açıklama</th>
+                        <th style="width: 15%">Durum</th>
+                        <th class="text-end pe-4" style="width: 15%">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="ps-4 fw-bold text-secondary">#@item.ID</td>
+
+
+                                <td>
+                                    <span class="fw-bold text-dark">@item.Name</span>
+                                </td>
+
+
+                                <td>
+                                    <span class="text-muted extra-small text-truncate d-inline-block" style="max-width: 320px; font-size: 0.85rem;" title="@item.Description">
+                                        @(string.IsNullOrEmpty(item.Description) ? "Açıklama yok" : item.Description)
+                                    </span>
+                                </td>
+
+                                <td>
+                                    @if (item.IsActive)
+                                    {
+                                        <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-1 rounded-pill">Aktif</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-1 rounded-pill">Pasif</span>
+                                    }
+                                </td>
+
+
+                                <td class="pe-4 text-end">
+                                    <div class="btn-group shadow-sm rounded-pill overflow-hidden border" role="group">
+                                        <a href="@Url.Action("Details", "TourCategory", new { area = "ManagerPanel", id = item.ID })"
+                                           class="btn btn-sm btn-light text-info border-end" title="Detaylar">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+
+                                        <a href="@Url.Action("Edit", "TourCategory", new { area = "ManagerPanel", id = item.ID })"
+                                           class="btn btn-sm btn-light text-warning border-end" title="Düzenle">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+
+                                        @using (Html.BeginForm("Delete", "TourCategory", new { area = "ManagerPanel", id = item.ID }, FormMethod.Post, new { target = "silmeHavuzu", style = "display:inline;" }))
+                                        {
+                                            <button type="submit" class="btn btn-sm btn-light text-danger border-0 h-100"
+                                                    onclick="return confirm('#@item.ID numaralı kategoriyi silmek istediğinize emin misiniz?')" title="Sil">
+                                                <i class="bi bi-trash-fill"></i>
+                                            </button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center py-5 text-muted">
+                                <i class="bi bi-folder-x fs-1 d-block mb-2 text-secondary opacity-50"></i>
+                                Kayıtlı hiçbir kategori bulunamadı.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<iframe name="silmeHavuzu" style="display:none;"></iframe>
